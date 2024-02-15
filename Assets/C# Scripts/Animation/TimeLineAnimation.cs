@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeLineAnimation : MonoBehaviour
+public class TimeLineAnimation : Gear, IAnimatable
 {
     [SerializeField]
     private float aheadOffset = 30;
@@ -15,8 +15,9 @@ public class TimeLineAnimation : MonoBehaviour
 
     private bool isAwake = false;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         foreach (var line in axises)
         {
             line.SetPosition(1, Vector3.zero);
@@ -24,7 +25,13 @@ public class TimeLineAnimation : MonoBehaviour
         }
     }
 
-    public void SetAwake()
+    protected override void SwitchOn()
+    {
+        base.SwitchOn();
+        AnimateAction();
+    }
+
+    public void AnimateAction()
     {
         isAwake = true;
     }

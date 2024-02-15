@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnterTrigger : MonoBehaviour
+public class EnterTrigger : Switch
 {
     [SerializeField]
-    private TimeLineAnimation timeLine;
+    private IAnimatable animateItem;
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
-            timeLine.SetAwake();
+        if (other.tag == "Player")
+            SwitchOn();
     }
 }
