@@ -21,20 +21,6 @@ public class InteractableUISwitch : MonoBehaviour, IInteractable, ITipable
         panelRoot.SetActive(false);
     }
     
-    private void OnTriggerEnter(Collider other)
-    {
-        Player player = other.GetComponent<Player>();
-        if(player != null)
-            OnEnter(player);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        Player player = other.GetComponent<Player>();
-        if(player != null)
-            OnExit(player);
-    }
-
     #endregion
     
     public void OnEnter(Player player)
@@ -54,15 +40,9 @@ public class InteractableUISwitch : MonoBehaviour, IInteractable, ITipable
             .onComplete += () => panelRoot.SetActive(false);
     }
 
-    public void OnInteractStart(Player player)
+    public void OnInteract(Player player)
     {
-        Debug.Log("OnInteractStart");
-        uiSwitch.SwitchState();
-    }
-
-    public void OnInteractFinished(Player player)
-    {
-        Debug.Log("OnInteractFinished");
+        Debug.Log("OnInteract");
         uiSwitch.SwitchState();
     }
 }

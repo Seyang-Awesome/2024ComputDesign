@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -11,11 +12,16 @@ public class FirstPersonController : MonoBehaviour
 
     private float pitch = 0.0f;
 
+    private void Start()
+    {
+        Inputs.GetInstance().SetInputEnable(true);  //仅在测试阶段用，后面控制总流程可删
+    }
+
     void Update()
     {
         // 获取鼠标输入
-        float mouseX = Input.GetAxis("Mouse X") * rotationSpeed;
-        float mouseY = -Input.GetAxis("Mouse Y") * rotationSpeed; // 反转Y轴输入
+        float mouseX = Inputs.GetInstance().MouseX * rotationSpeed;
+        float mouseY = -Inputs.GetInstance().MouseY * rotationSpeed; // 反转Y轴输入
 
         // 旋转玩家对象（左右旋转）
         transform.Rotate(0.0f, mouseX, 0.0f);
@@ -26,8 +32,8 @@ public class FirstPersonController : MonoBehaviour
         Camera.main.transform.localRotation = Quaternion.Euler(pitch, 0.0f, 0.0f);
 
         // 获取移动输入
-        float moveX = Input.GetAxis("Horizontal") * moveSpeed;
-        float moveZ = Input.GetAxis("Vertical") * moveSpeed;
+        float moveX = Inputs.GetInstance().MoveX * moveSpeed;
+        float moveZ = Inputs.GetInstance().MoveY * moveSpeed;
 
         // 根据相机的前进方向计算移动方向
         Vector3 moveDirection = Camera.main.transform.forward * moveZ;

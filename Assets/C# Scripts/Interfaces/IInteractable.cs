@@ -4,9 +4,6 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    void OnInteractStart(Player player);
-    void OnInteractFinished(Player player);
-    
-    
+    void OnInteract(Player player);
 }
 
