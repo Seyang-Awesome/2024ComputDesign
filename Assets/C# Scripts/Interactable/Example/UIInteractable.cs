@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(UISwitch))]
-public class InteractableUISwitch : MonoBehaviour, IInteractable, ITipable
+public class UIInteractable : MonoBehaviour, IInteractable, ITipable
 {
      [SerializeField] private Image panelImage;
      [SerializeField] private float duration;
