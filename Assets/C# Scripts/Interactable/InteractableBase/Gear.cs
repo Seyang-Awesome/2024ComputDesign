@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,15 @@ public class Gear : MonoBehaviour
         {
             sw.switchOn += SingleSwitchOn;
             sw.switchOff += SingleSwitchOff;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        foreach (Switch sw in targetSwitch)
+        {
+            sw.switchOn -= SingleSwitchOn;
+            sw.switchOff -= SingleSwitchOff;
         }
     }
 
