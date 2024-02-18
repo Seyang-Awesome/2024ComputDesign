@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestListener : Listener
+public class TestPublisher : Publisher
 {
     
 }
