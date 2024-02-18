@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Sirenix.Utilities;
 using UnityEngine;
 
+#if ODIN_INSPECTOR
+
 [Serializable]
 public class PALCase
 {
@@ -28,3 +30,4 @@ public class PALCaseItem
     [field: SerializeField] public int State{ get; private set; }
 }
 
+#endif

@@ -48,7 +48,7 @@ public abstract class Listener : SerializedMonoBehaviour
         publishers.ForEach(publisher => publisher.OnStateChanged -= OnPublisherStateChanged);
     }
 
-    private void OnPublisherStateChanged(Publisher publisher, int state)
+    protected virtual void OnPublisherStateChanged(Publisher publisher, int state, PALEventArgs args)
     {
         if (!currentStateDic.ContainsKey(publisher)) return;
         currentStateDic[publisher] = state;

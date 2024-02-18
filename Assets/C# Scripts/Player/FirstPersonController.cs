@@ -15,6 +15,7 @@ public class FirstPersonController : MonoBehaviour
     private void Start()
     {
         Inputs.GetInstance().SetInputEnable(true);  //仅在测试阶段用，后面控制总流程可删
+        // Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()

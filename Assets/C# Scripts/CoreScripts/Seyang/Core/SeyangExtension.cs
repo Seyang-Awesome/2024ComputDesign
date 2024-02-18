@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public static class SeyangExtension
@@ -16,8 +18,20 @@ public static class SeyangExtension
     //     transform.DOMove(pos, backTime);
     //     await UniTask.Delay(TimeSpan.FromSeconds(backTime));
     // }
-    
 
+    public static Tween DOBounceFontSize(this TextMeshProUGUI text, float endFontSize, string endValue, float duration)
+    {
+        return DOTween.Sequence()
+            .Append(text.DOFontSize(0, duration))
+            .AppendCallback(() => text.text = endValue)
+            .Append(text.DOFontSize(endFontSize, duration));
+    }
+
+    public static bool IsFloatsEqual(this float i, float j)
+    {
+        //float.Epsilon是能表示float的一个非常小的整数
+        return Math.Abs(i - j) < float.Epsilon;
+    }
     
 }
 
@@ -97,3 +111,8 @@ public class InvokableAction<T1, T2, T3>: InvokableActionBase
 }
 #endregion
 
+#region DOTween
+
+
+
+#endregion
