@@ -71,12 +71,12 @@ public class UISquaresAndCubes : Publisher
 
     private void ShowLengthText()
     {
-        lengthText.DOBounceFontSize(lengthFontSize, currentLength.Value.ToString(), Consts.UITextChangeDuration);
+        lengthText.DOBounceFontSize(lengthFontSize, currentLength.Value.ToString(), Consts.UIChangeDuration);
     }
 
     private void ShowDimensionText()
     {
-        dimensionText.DOBounceFontSize(dimensionFontSize, currentDimension.Value.ToString(), Consts.UITextChangeDuration);
+        dimensionText.DOBounceFontSize(dimensionFontSize, currentDimension.Value.ToString(), Consts.UIChangeDuration);
     }
 
     private void Publish()

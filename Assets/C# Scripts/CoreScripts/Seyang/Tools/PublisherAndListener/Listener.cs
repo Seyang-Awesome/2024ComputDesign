@@ -13,7 +13,7 @@ public abstract class Listener : SerializedMonoBehaviour
     //通过Inspector窗口挂载相应的监听者
     [field: SerializeField,
             LabelText("订阅者列表")]
-    protected List<Publisher> publishers { get; private set; }
+    protected List<IPublisher> publishers { get; private set; }
     
     //通过Inspector窗口设置特定情况下发生的事件
     [OdinSerialize,
@@ -27,7 +27,7 @@ public abstract class Listener : SerializedMonoBehaviour
     private UnityAction elseAction;
     
     //当前的Publisher的状态
-    private Dictionary<Publisher, int> currentStateDic = new(); 
+    private Dictionary<IPublisher, int> currentStateDic = new(); 
     
     protected virtual void Awake()
     {
@@ -48,7 +48,7 @@ public abstract class Listener : SerializedMonoBehaviour
         publishers.ForEach(publisher => publisher.OnStateChanged -= OnPublisherStateChanged);
     }
 
-    protected virtual void OnPublisherStateChanged(Publisher publisher, int state, PALEventArgs args)
+    protected virtual void OnPublisherStateChanged(IPublisher publisher, int state, PALEventArgs args)
     {
         if (!currentStateDic.ContainsKey(publisher)) return;
         currentStateDic[publisher] = state;

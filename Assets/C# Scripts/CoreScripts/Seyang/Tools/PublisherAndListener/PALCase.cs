@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Sirenix.Serialization;
 using Sirenix.Utilities;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class PALCase
 {
     [field: SerializeField] public List<PALCaseItem> palCaseItems { get; private set; }
 
-    public bool IsMatchCase(Dictionary<Publisher, int> stateDic)
+    public bool IsMatchCase(Dictionary<IPublisher, int> stateDic)
     {
         if (palCaseItems.IsNullOrEmpty()) return false;
         foreach (var palCaseItem in palCaseItems)
@@ -26,8 +27,8 @@ public class PALCase
 [Serializable]
 public class PALCaseItem
 {
-    [field: SerializeField] public Publisher Publisher { get; private set; }
-    [field: SerializeField] public int State{ get; private set; }
+    [field: OdinSerialize] public IPublisher Publisher { get; private set; }
+    [field: OdinSerialize] public int State { get; private set; }
 }
 
 #endif

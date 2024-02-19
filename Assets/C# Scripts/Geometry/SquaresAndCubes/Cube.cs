@@ -16,7 +16,7 @@ public class Cube : Listener
         {2, new Vector3(1f, MinLength, 1f)},
         {3, new Vector3(1f, 1f, 1f)},
     };
-    protected override void OnPublisherStateChanged(Publisher publisher, int state, PALEventArgs args)
+    protected override void OnPublisherStateChanged(IPublisher publisher, int state, PALEventArgs args)
     {
         if (!(args is SquaresAndCubesArgs squaresAndCubesArgs)) return;
         currentLength = squaresAndCubesArgs.Length;
