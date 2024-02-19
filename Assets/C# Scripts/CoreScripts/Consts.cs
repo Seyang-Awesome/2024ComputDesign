@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Consts
 {
-    public const float UIAppearDuration = 0.5f;
+    public const float UIAppearDuration = 2f;
     public const float UITextChangeDuration = 0.2f;
     
     public const float BlockMoveInterval = 0.3f;
