@@ -22,7 +22,7 @@ public class DecimalismUI : Publisher
     private void Start()
     {
         lengthList = new(new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10 });
-        currentLength = lengthList[0];
+        currentLength = 0;
 
         lengthUpButton.onClick.AddListener(OnClickLengthUpButton);
         lengthDownButton.onClick.AddListener(OnClickLengthDownButton);
@@ -51,7 +51,6 @@ public class DecimalismUI : Publisher
     private void OnClickLengthDownButton()
     {
         Debug.Log("按下键");
-        currentLength = currentLength.Next ?? lengthList.First;
         if (currentLength == 10)
         {
             currentLength = 0;
@@ -60,14 +59,14 @@ public class DecimalismUI : Publisher
         {
             currentLength++;
         }
-        blocks[currentLength.Value].MoveToTarget();
+        blocks[currentLength].MoveToTarget();
         ShowLengthText();
     }
     
 
     private void ShowLengthText()
     {
-        lengthText.DOBounceFontSize(lengthFontSize, currentLength.Value.ToString(), Consts.UITextChangeDuration);
+        lengthText.DOBounceFontSize(lengthFontSize, currentLength.ToString(), Consts.UIChangeDuration);
     }
     
     
