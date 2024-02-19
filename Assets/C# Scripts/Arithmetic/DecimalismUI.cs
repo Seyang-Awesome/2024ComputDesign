@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using DG.DemiLib;
+using Unity.VisualScripting;
 
 public class DecimalismUI : Publisher
 {
@@ -34,12 +35,12 @@ public class DecimalismUI : Publisher
     private void OnClickLengthUpButton()
     {
         Debug.Log("按上键");
-        blocks[currentLength].MoveToOrigin();
-        if (currentLength == 0)
+        if (currentLength != 0)
         {
-            currentLength = 10;
+            blocks[currentLength-1].MoveToOrigin();
         }
-        else
+
+        if (currentLength != 0)
         {
             currentLength--;
         }
@@ -51,15 +52,16 @@ public class DecimalismUI : Publisher
     private void OnClickLengthDownButton()
     {
         Debug.Log("按下键");
-        if (currentLength == 10)
-        {
-            currentLength = 0;
-        }
-        else
+        //变数
+        if (currentLength != 10)
         {
             currentLength++;
         }
-        blocks[currentLength].MoveToTarget();
+        //变阶梯
+        if (currentLength != 0)
+        {
+            blocks[currentLength-1].MoveToTarget();
+        }
         ShowLengthText();
     }
     
