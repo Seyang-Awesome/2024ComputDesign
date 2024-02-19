@@ -13,6 +13,8 @@ public class Inputs : BaseManager<Inputs>
     public float MoveY => IsEnable ? Input.GetAxis("Vertical") : DefaultFloat;
     public bool IsTryToInteract => IsEnable && Input.GetMouseButtonDown(0);
 
+    public bool IsMouseRightDown => Input.GetMouseButtonDown(0);
+
     /// <summary>
     /// 设置输入状态
     /// </summary>

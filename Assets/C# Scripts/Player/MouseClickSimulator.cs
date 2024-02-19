@@ -11,7 +11,7 @@ public class MouseClickSimulator : MonoBehaviour
     void Update()
     {
         // 模拟左键点击
-        if (Input.GetMouseButtonDown(0))
+        if (Inputs.GetInstance().IsMouseRightDown)
         {
             SimulateMouseClick();
         }
