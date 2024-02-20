@@ -24,6 +24,8 @@ public class UISquaresAndCubes : Publisher
     private float lengthFontSize;
     private float dimensionFontSize;
     
+    
+    
     private void Start()
     {
         lengthList = new(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });

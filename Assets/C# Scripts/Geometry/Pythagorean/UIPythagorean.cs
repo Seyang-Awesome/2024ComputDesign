@@ -25,6 +25,8 @@ public class UIPythagorean : MonoBehaviour
     private float widthFontSize;
     private int CurrentWidth => currentWidthNode.Value;
 
+    public Action<int, int> onStateChanged;
+
     private void Start()
     {
         lengthList = new(new int[] { 1, 2, 3, 4, 5 });
@@ -47,6 +49,7 @@ public class UIPythagorean : MonoBehaviour
         currentLengthNode = currentLengthNode.Next ?? lengthList.First;
         lengthRoot.DOSizeDelta(new Vector2(CurrentLength * size, lengthRoot.sizeDelta.y), Consts.UIChangeDuration);
         lengthText.DOBounceFontSize(lengthFontSize, CurrentLength.ToString(), Consts.UIChangeDuration);
+        onStateChanged?.Invoke(CurrentLength,CurrentWidth);
     }
     
     private void OnClickWidthButton()
@@ -54,6 +57,7 @@ public class UIPythagorean : MonoBehaviour
         currentWidthNode = currentWidthNode.Next ?? widthList.First;
         widthRoot.DOSizeDelta(new Vector2(CurrentWidth * size, widthRoot.sizeDelta.y), Consts.UIChangeDuration);
         widthText.DOBounceFontSize(widthFontSize, CurrentWidth.ToString(), Consts.UIChangeDuration);
+        onStateChanged?.Invoke(CurrentLength,CurrentWidth);
     }
 }
 
