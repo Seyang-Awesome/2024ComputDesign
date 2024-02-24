@@ -7,7 +7,7 @@ using UnityEngine;
 #if ODIN_INSPECTOR
 
 [Serializable]
-public class PALCase
+public struct PALCase
 {
     [field: SerializeField] public List<PALCaseItem> palCaseItems { get; private set; }
 
@@ -25,7 +25,7 @@ public class PALCase
 }
 
 [Serializable]
-public class PALCaseItem
+public struct PALCaseItem
 {
     [field: OdinSerialize] public IPublisher Publisher { get; private set; }
     [field: OdinSerialize] public int State { get; private set; }

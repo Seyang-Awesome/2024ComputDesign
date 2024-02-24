@@ -15,7 +15,7 @@ public class UIPythagorean : MonoBehaviour
     private LinkedList<int> lengthList;
     private LinkedListNode<int> currentLengthNode;
     private float lengthFontSize;
-    private int CurrentLength => currentLengthNode.Value;
+    public int CurrentLength => currentLengthNode.Value;
     
     [SerializeField] private RectTransform widthRoot;
     [SerializeField] private TextMeshProUGUI widthText;
@@ -23,9 +23,12 @@ public class UIPythagorean : MonoBehaviour
     private LinkedList<int> widthList;
     private LinkedListNode<int> currentWidthNode;
     private float widthFontSize;
-    private int CurrentWidth => currentWidthNode.Value;
+    public int CurrentWidth => currentWidthNode.Value;
 
-    public Action<int, int> onStateChanged;
+    [SerializeField] private Button checkButton;
+    
+    public event Action<int, int> onStateChanged;
+    public event Func<bool> onRequestCheck;
 
     private void Start()
     {
@@ -42,6 +45,18 @@ public class UIPythagorean : MonoBehaviour
         widthButton.onClick.AddListener(OnClickWidthButton);
         widthRoot.sizeDelta = new Vector2(CurrentWidth * size, widthRoot.sizeDelta.y);
         widthText.text = CurrentWidth.ToString();
+        
+        checkButton.onClick.AddListener(() =>
+        {
+            //如果Check正确，则不再接受点击事件
+            bool? result = onRequestCheck?.Invoke();
+            if (result.HasValue && result.Value)
+            {
+                lengthButton.image.raycastTarget = false;
+                widthButton.image.raycastTarget = false;
+                checkButton.image.raycastTarget = false;
+            }
+        });
     }
 
     private void OnClickLengthButton()

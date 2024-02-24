@@ -37,7 +37,7 @@ public class Cube : Listener
 
     private void UpdateState()
     {
-        transform.DOScale(MagicMultiple(dimensionDic[currentDimension] ,currentLength), Consts.CubeChangeDuration);
+        transform.DOScale(MagicMultiple(dimensionDic[currentDimension] ,currentLength), Consts.ObjectsChangeDuration);
     }
 }
 

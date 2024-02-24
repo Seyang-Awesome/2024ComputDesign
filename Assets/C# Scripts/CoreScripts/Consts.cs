@@ -11,6 +11,7 @@ public class Consts
     public const float BlockMoveDuration = 1f;
     public const float BlockMoveShakeIntensity = 0f;
 
-    public const float CubeChangeDuration = 0.5f;
+    public const float ObjectsChangeDuration = 0.5f;
+    public const float ObjectsFlashDuration = 0.5f;
 }
 
