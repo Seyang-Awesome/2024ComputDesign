@@ -7,7 +7,7 @@ public class MoveBlock : MonoBehaviour
 {
     [SerializeField] private Ease ease = Ease.OutQuad;
     [SerializeField] private Vector3 offset;
-    
+
     private Vector3 origin;
     private Vector3 target;
     private void Start()
@@ -20,7 +20,12 @@ public class MoveBlock : MonoBehaviour
     {
         return transform.DOMove(origin, Consts.BlockMoveDuration).SetEase(ease);
     }
-
+    
+    
+    
+    
+    
+    
     public Tween MoveToTarget()
     {
         return transform.DOMove(target, Consts.BlockMoveDuration).SetEase(ease);
