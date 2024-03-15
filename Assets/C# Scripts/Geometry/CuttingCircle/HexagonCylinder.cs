@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 /// <summary>
@@ -25,14 +27,28 @@ public class HexagonCylinder : MonoBehaviour
         GenerateMesh();
     }
 
+    private void Update()
+    {
+        GenerateMesh();
+    }
+
     /// <summary>
     /// 修改边数
     /// </summary>
     /// <param name="newSides"></param>
-    public void SetSides(int newSides)
+    public void SetSides(int newSides, Action onComplete = null)
     {
-        sides = newSides;
-        GenerateMesh();
+        // sides = newSides;
+        DOTween.To(
+            () => sides,
+            s =>
+            {
+                sides = s;
+                GenerateMesh();
+            },
+            newSides,
+            Consts.ObjectsChangeDuration)
+            .OnComplete(() => onComplete?.Invoke());
     }
 
     private void GenerateMesh()

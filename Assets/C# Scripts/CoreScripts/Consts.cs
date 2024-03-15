@@ -13,5 +13,7 @@ public class Consts
 
     public const float ObjectsChangeDuration = 0.5f;
     public const float ObjectsFlashDuration = 0.5f;
+
+    public const float CuttingCircleLineDuration = 2.5f;
 }
 
