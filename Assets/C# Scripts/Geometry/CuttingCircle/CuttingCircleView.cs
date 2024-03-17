@@ -38,7 +38,7 @@ public class CuttingCircleView : MonoBehaviour, IPointerClickHandler
         // 此次生成的线与圆心相连形成的角的角度
         float cellAngle = 360f / lineNum;
         
-        hexagonCylinder.SetSides(lineNum, () =>
+        hexagonCylinder.SetSides(data.lineNum, () =>
         {
             for (int i = 0; i < lineNum; i++)
             {
