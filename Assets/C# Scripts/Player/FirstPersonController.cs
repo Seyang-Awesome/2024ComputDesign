@@ -41,6 +41,9 @@ public class FirstPersonController : MonoBehaviour
         moveDirection += Camera.main.transform.right * moveX;
         moveDirection.y = 0.0f; // 确保不进行垂直移动
 
+        moveDirection.Normalize();
+        moveDirection *= moveSpeed;
+
         // 移动玩家对象
         transform.position += moveDirection * Time.deltaTime;
     }
