@@ -1,10 +1,11 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Abacus : MonoBehaviour
+public class Abacus : Switch
 {
     [SerializeField]
     private int currentValue;
@@ -54,5 +55,10 @@ public class Abacus : MonoBehaviour
     private void OnFinished()
     {
         onFinishGame?.Invoke();
+
+        DOTween.Sequence()
+            .AppendInterval(3f)
+            .OnComplete(SwitchOn);
     }
+   
 }

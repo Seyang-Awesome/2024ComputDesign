@@ -5127,8 +5127,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 5
+      scalar: 3
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -9948,8 +9948,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 5
+      scalar: 3
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -14953,8 +14953,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 5
+      scalar: 3
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -19806,8 +19806,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 5
+      scalar: 3
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -24627,8 +24627,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 5
+      scalar: 3
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -34512,8 +34512,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 5
+      scalar: 3
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -49389,8 +49389,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 5
+      scalar: 3
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -59086,8 +59086,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 5
+      scalar: 3
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -69000,7 +69000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c4c9313efb4508459012beff3b43ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mult: 1
+  mult: 1000
   destroyParticle: {fileID: 1044286456341562953, guid: 185e86664aff01740a07cb40d68ad78f,
     type: 3}
 --- !u!1 &1009466095702212406
@@ -73992,8 +73992,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 5
+      scalar: 3
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -93266,7 +93266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c4c9313efb4508459012beff3b43ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mult: 1
+  mult: 100
   destroyParticle: {fileID: 1044286456341562953, guid: 185e86664aff01740a07cb40d68ad78f,
     type: 3}
 --- !u!1 &3236746691960147942
@@ -93350,7 +93350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c4c9313efb4508459012beff3b43ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mult: 1
+  mult: 10
   destroyParticle: {fileID: 1044286456341562953, guid: 185e86664aff01740a07cb40d68ad78f,
     type: 3}
 --- !u!1 &3736787141736971872
@@ -107968,7 +107968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentValue: 0
-  questionValues: 0700000026000000d6020000fe0d0000
+  questionValues: c1000000e5040000ce0600009d070000
   questionText: {fileID: 98168353}
   valueText: {fileID: 338542434}
 --- !u!1 &6376298537226789595

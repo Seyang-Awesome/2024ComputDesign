@@ -18769,96 +18769,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 177915049, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 177915049, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.minScalar
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 196125965, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 196125965, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.minScalar
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 385784681, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 385784681, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.minScalar
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 617293210, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 617293210, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.minScalar
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 719150324, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 719150324, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.minScalar
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1123809163, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1123809163, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.minScalar
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1810168851, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1810168851, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.minScalar
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1992168187, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1992168187, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: InitialModule.startLifetime.minScalar
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2113317864, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: questionValues.Array.data[0]
-      value: 193
-      objectReference: {fileID: 0}
-    - target: {fileID: 2113317864, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: questionValues.Array.data[1]
-      value: 1253
-      objectReference: {fileID: 0}
-    - target: {fileID: 2113317864, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: questionValues.Array.data[2]
-      value: 1742
-      objectReference: {fileID: 0}
-    - target: {fileID: 2113317864, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
-      propertyPath: questionValues.Array.data[3]
-      value: 1949
-      objectReference: {fileID: 0}
-    - target: {fileID: 55515219906027197, guid: bcbba84547d5e63439f9ed927efaf1ab,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 55515219906027197, guid: bcbba84547d5e63439f9ed927efaf1ab,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.minScalar
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1280594835316315458, guid: bcbba84547d5e63439f9ed927efaf1ab,
         type: 3}
       propertyPath: m_RootOrder
@@ -18914,25 +18824,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5065091308289175035, guid: bcbba84547d5e63439f9ed927efaf1ab,
-        type: 3}
-      propertyPath: mult
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 5558130690555810092, guid: bcbba84547d5e63439f9ed927efaf1ab,
         type: 3}
       propertyPath: m_Name
       value: Abacus
-      objectReference: {fileID: 0}
-    - target: {fileID: 8564972114980435130, guid: bcbba84547d5e63439f9ed927efaf1ab,
-        type: 3}
-      propertyPath: mult
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 9014855308379438241, guid: bcbba84547d5e63439f9ed927efaf1ab,
-        type: 3}
-      propertyPath: mult
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcbba84547d5e63439f9ed927efaf1ab, type: 3}
