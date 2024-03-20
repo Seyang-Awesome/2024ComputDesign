@@ -37,6 +37,10 @@ public class EndAnim : Gear, IAnimatable
     private EndAnimStepInfo stepInfo;
     [SerializeField]
     private EndAnimStateInfo stateInfo;
+    [SerializeField]
+    private int maxCount = 400;
+
+    public Action onUpdateLastScene;
 
     private Transform player;
     private Vector3 origin;
@@ -77,11 +81,11 @@ public class EndAnim : Gear, IAnimatable
         var pos = origin;
 
         //生成台阶
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < maxCount; i++)
         {
             var step = Instantiate(stepInfo.stepPrefab,transform);
 
-            step.transform.position = pos + Quaternion.Euler(-45 ,0,0) * Vector3.down * 40;
+            step.transform.position = pos + Quaternion.Euler(i % 2 == 0 ? 60 : -60 ,0,0) * Vector3.down * 40;
             step.transform.DOMove(pos,stepInfo.appearTime).SetEase(Ease.OutQuad);
             pos += stepInfo.offsetBetween;
 
@@ -105,7 +109,6 @@ public class EndAnim : Gear, IAnimatable
             yield return null;
         }
 
-        print("已更新最后一个");
     }
 
     private bool ReachNewState(int index) //更新场景阶段
@@ -118,20 +121,20 @@ public class EndAnim : Gear, IAnimatable
         RenderSettings.skybox = state.skyBox;
         Camera.main.GetComponent<Skybox>().material = state.skyBox;
 
-        print("开始生成字符");
-
         for (int i = 0; i < state.letters.Length; i++)
         {
-            print("生成字符");
             var letter = Instantiate(state.letters[i], WorldCanvas.transform);
 
             float rand = Random.value;
-            var target = player.position + Vector3.forward * (-20 + (float)i/ state.letters.Length * 40) + Vector3.right * (10 * rand + 10) + Vector3.up * (7 * rand + 8);
+            var target = player.position + Vector3.forward * (-20 + (float)i/ state.letters.Length * 40) + Vector3.right * (20 * rand + 30) + Vector3.up * (2 * rand + 13);
             letter.transform.position = target + Vector3.down * 60;
             letter.transform.DOMove(target, 1f + 2 * rand);
             letter.AddComponent<Billboard>();
 
         }
+
+        if (index == stateInfo.states.Length - 1)
+            onUpdateLastScene?.Invoke();
 
         return true;
     }
