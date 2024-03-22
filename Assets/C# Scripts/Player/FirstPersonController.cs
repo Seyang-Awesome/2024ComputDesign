@@ -10,12 +10,15 @@ public class FirstPersonController : MonoBehaviour
     public float moveSpeed = 5.0f; // 移动速度
     public float pitchRange = 80.0f; // 俯仰角限制
 
+    private Rigidbody rb;
+
     private float pitch = 0.0f;
 
     private void Start()
     {
         Inputs.GetInstance().SetInputEnable(true);  //仅在测试阶段用，后面控制总流程可删
         Cursor.lockState = CursorLockMode.Locked;
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -45,6 +48,6 @@ public class FirstPersonController : MonoBehaviour
         moveDirection *= moveSpeed;
 
         // 移动玩家对象
-        transform.position += moveDirection * Time.deltaTime;
+        rb.velocity = moveDirection + Vector3.up * rb.velocity.y;
     }
 }
