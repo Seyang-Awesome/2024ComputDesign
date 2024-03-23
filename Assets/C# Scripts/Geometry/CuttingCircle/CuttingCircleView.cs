@@ -17,7 +17,7 @@ public class CuttingCircleView : MonoBehaviour, IPointerClickHandler
     
     public event Action OnClickPanel;
 
-    private void Start()
+    private void Awake()
     {
         startFontSize = areaText.fontSize;
     }
