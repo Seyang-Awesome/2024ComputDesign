@@ -7,18 +7,26 @@ using UnityEngine.UI;
 public class StartSceneAnim : MonoBehaviour
 {
     [SerializeField]
-    private float duration = 30f;
+    private float duration = 5f;
 
     [SerializeField]
-    [Multiline(20)]
-    private string lines;
+    [Multiline(5)]
+    private string[] lines;
+
+    private int currentIndex;
 
     private Text backGroundWord;
+
     
     private void Start()
     {
         backGroundWord = GetComponent<Text>();
         backGroundWord.text = "";
-        backGroundWord.DOText(lines, duration).SetEase(Ease.Linear);
+    }
+
+    public void MoveNextLine()
+    {
+        backGroundWord.text = "";
+        backGroundWord.DOText(lines[currentIndex++], duration).SetEase(Ease.Linear);
     }
 }
