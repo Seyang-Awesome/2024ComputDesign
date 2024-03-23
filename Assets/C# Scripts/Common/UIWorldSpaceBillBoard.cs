@@ -17,6 +17,7 @@ public class UIWorldSpaceBillBoard : MonoBehaviour
     private void Update()
     {
         transform.LookAt(mainCameraTransform);
+        transform.Rotate(Vector3.up, 180, Space.Self);
     }
 }
 

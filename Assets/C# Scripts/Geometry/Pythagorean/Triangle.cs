@@ -43,11 +43,11 @@ public class Triangle : MonoBehaviour
 
         if (result)
             DOTween.Sequence()
-                .Append(transform.DOLocalRotate(new Vector3(-showAngle, 0, 0), Consts.ObjectsChangeDuration))
+                .Append(transform.DOLocalRotate(new Vector3(showAngle, 0, 0), Consts.ObjectsChangeDuration))
                 .Append(meshRenderer.material.DOColor(showColor,"_TintColor", Consts.ObjectsFlashDuration).SetEase(Ease.Flash,4));
         else
             DOTween.Sequence()
-                .Append(transform.DOLocalRotate(new Vector3(-showAngle, 0, 0), Consts.ObjectsChangeDuration))
+                .Append(transform.DOLocalRotate(new Vector3(showAngle, 0, 0), Consts.ObjectsChangeDuration))
                 .Append(meshRenderer.material.DOColor(showColor,"_TintColor", Consts.ObjectsFlashDuration).SetEase(Ease.Flash,4))
                 .Append(transform.DOLocalRotate(new Vector3(0, 0, 0), Consts.ObjectsChangeDuration));
 

@@ -12,7 +12,7 @@ public class SpiralGenerator : MonoBehaviour
     public float tiltAngle = 30f; // 倾斜度
     public float distanceBetweenObjects = 1f; // 物体之间的距离
     public float rotationSpeed = 30f; // 旋转速度
-
+    public Vector3 rotationDirection = Vector3.forward;
     private List<GameObject> objects = new List<GameObject>();
     private float currentRotation = 0f;
 
@@ -46,18 +46,25 @@ public class SpiralGenerator : MonoBehaviour
         {
             float angle = i * Mathf.PI * 2f / objectCount;
             Vector3 position = new Vector3(Mathf.Cos(angle) * radius, Mathf.Sin(angle) * radius * Mathf.Cos(tiltAngle * Mathf.Deg2Rad), Mathf.Sin(angle) * radius * Mathf.Sin(tiltAngle * Mathf.Deg2Rad));
-            GameObject obj = Instantiate(prefab, position, Quaternion.identity,transform);
+            GameObject obj = Instantiate(prefab, transform.position + position, Quaternion.identity,transform);
             objects.Add(obj);
         }
     }
 
     void RotateSpiral()
     {
-        transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+        transform.RotateAround(transform.position, rotationDirection , rotationSpeed * Time.deltaTime);
     }
 
     public void SetRotationSpeed(float speed)
     {
         rotationSpeed = speed;
     }
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, rotationDirection*10 + transform.position);
+    }
 }
+
