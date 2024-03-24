@@ -14,7 +14,7 @@ public class TaichiMoveBlock : MonoBehaviour
     private void Start()
     {
         origin = transform.position;
-        //      target = origin + offset;
+        //      target = origin + offset;11
     }
 
     public void Convert(int index)

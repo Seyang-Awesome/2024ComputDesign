@@ -16,10 +16,12 @@ public class TaichiChange : MonoBehaviour
         image = GetComponent<Image>();
     }
 
+    
     public void Change()
     {
                 
         isOn = !isOn;
+        
         if (isOn)
         {
             image.sprite = spriteOpen;
