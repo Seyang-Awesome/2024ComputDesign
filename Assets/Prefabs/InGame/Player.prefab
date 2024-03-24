@@ -5048,11 +5048,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSpeed: 4
+  stepSeCheckInterval: 1.2
   rotationSpeed: 5
   moveSpeed: 5
   pitchRange: 80
   detectDir: {x: 0, y: -1, z: 0}
   detectLength: 2.4
+  audioRandomGroup:
+    audioClips:
+    - {fileID: 8300000, guid: d136ae1a066de0e46ad0b3c732d17696, type: 3}
+    - {fileID: 8300000, guid: 0ec56607315c0ac4295e384afcbdc817, type: 3}
+    - {fileID: 8300000, guid: d328cc220eedf4a4b923a62791fda0ed, type: 3}
 --- !u!114 &4031149463935662778
 MonoBehaviour:
   m_ObjectHideFlags: 0

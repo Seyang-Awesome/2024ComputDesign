@@ -19,6 +19,8 @@ public class ApexDialogBoxGroup
 
 public class ApexDialogBoxPanel : MonoSingleton<ApexDialogBoxPanel>
 {
+    protected override bool IsDontDestroyOnLoad => false;
+
     [SerializeField] private ApexDialogBoxItem[] items;
     [SerializeField] private Transform center;
     [SerializeField] private Vector2 startPosOffset;
