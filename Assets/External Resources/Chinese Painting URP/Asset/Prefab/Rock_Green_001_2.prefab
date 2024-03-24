@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6587405774956300484}
   - component: {fileID: 3149107216260163934}
   - component: {fileID: 1890348974384579061}
-  - component: {fileID: 2434446199720761230}
+  - component: {fileID: 8670210514364799542}
   m_Layer: 0
   m_Name: Rock_Green_001_2
   m_TagString: Untagged
@@ -75,8 +75,8 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.671368, y: 16.9177, z: 8.546124}
   m_Center: {x: 13.007374, y: 3.3679447, z: -1.3952842}
---- !u!65 &2434446199720761230
-BoxCollider:
+--- !u!64 &8670210514364799542
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -85,9 +85,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 16.16267, y: 2.1944876, z: 20.673725}
-  m_Center: {x: -0.38308144, y: 0.5972437, z: 0.93818855}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &8626486960018408979
 PrefabInstance:
   m_ObjectHideFlags: 0
