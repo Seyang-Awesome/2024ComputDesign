@@ -6,16 +6,16 @@ using UnityEngine;
 public class AirWall : MonoBehaviour
 {
     [SerializeField] private bool initIsTrigger;
-    private Collider collider;
+    private Collider airCollider;
     private void Start()
     {
-        collider = GetComponent<Collider>();
+        airCollider = GetComponent<Collider>();
         SetColliderType(initIsTrigger);
     }
 
     public void SetColliderType(bool isTrigger)
     {
-        if (collider == null) return;
-        collider.isTrigger = isTrigger;
+        if (airCollider == null) return;
+        airCollider.isTrigger = isTrigger;
     }
 }
