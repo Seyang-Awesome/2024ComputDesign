@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class TestApexDialogBox : MonoBehaviour
 {
-    public ApexDialogBoxGroup group;
+    public ApexDialogBoxGroup[] groups;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
-            ApexDialogBoxPanel.Instance.PushDialogContent(group);
+            foreach (var group in groups)
+            {
+                ApexDialogBoxPanel.Instance.PushDialogContent(group);
+            }
         }
     }
 }
