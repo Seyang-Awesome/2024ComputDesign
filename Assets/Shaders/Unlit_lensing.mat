@@ -25,14 +25,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SkyCube:
-        m_Texture: {fileID: 8900000, guid: 1cbf6ce346dbedf44837cfc3fd3f1e63, type: 2}
+        m_Texture: {fileID: 8900000, guid: aae307d40b0632b42b5426638f471147, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DiskRadian: 0.39
+    - _DiskRadian: 0.25
     - _DistortionH: 0.015
-    - _DistortionP: 3
-    - _HoleRadian: 0.001
+    - _DistortionP: 10
+    - _HoleRadian: 0.14
     m_Colors: []
   m_BuildTextureStacks: []

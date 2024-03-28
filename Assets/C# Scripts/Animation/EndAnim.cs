@@ -85,7 +85,7 @@ public class EndAnim : Gear, IAnimatable
         {
             var step = Instantiate(stepInfo.stepPrefab,transform);
 
-            step.transform.position = pos + Quaternion.Euler(i % 2 == 0 ? 60 : -60 ,0,0) * Vector3.down * 40;
+            step.transform.position = pos + Vector3.down * 40; //+ Quaternion.Euler(i % 2 == 0 ? 60 : -60 ,0,0) * Vector3.down * 40;
             step.transform.DOMove(pos,stepInfo.appearTime).SetEase(Ease.OutQuad);
             pos += stepInfo.offsetBetween;
 
