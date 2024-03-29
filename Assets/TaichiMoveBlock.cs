@@ -35,12 +35,12 @@ public class TaichiMoveBlock : MonoBehaviour
 
     public Tween MoveToOrigin(int index)
     {
-        return transform.DOMove(transform.position - offset[index], Consts.BlockMoveDuration).SetEase(ease);
+        return transform.DOBlendableMoveBy(-offset[index], Consts.BlockMoveDuration).SetEase(ease);
     }
 
     public Tween MoveToTarget(int index)
     {
-        return transform.DOMove(transform.position + offset[index], Consts.BlockMoveDuration).SetEase(ease);
+        return transform.DOBlendableMoveBy(offset[index], Consts.BlockMoveDuration).SetEase(ease);
     }
 
     private void OnDrawGizmos()
