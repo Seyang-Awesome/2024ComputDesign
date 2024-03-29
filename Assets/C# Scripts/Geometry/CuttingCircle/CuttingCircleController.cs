@@ -52,7 +52,7 @@ public class CuttingCircleController : MonoBehaviour
             .AppendCallback(() =>
             {
                 Cover.Instance.SetBackgroundColor(Color.white);
-                Cover.Instance.ChangeScene("EndScene", group.clip.length + 1);
+                Cover.Instance.ChangeScene("Ancient", group.clip.length + 1);
             });
         
         ApexDialogBoxPanel.Instance.PushDialogContent(group);

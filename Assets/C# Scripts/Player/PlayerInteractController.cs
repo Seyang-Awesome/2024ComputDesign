@@ -33,16 +33,26 @@ public class PlayerInteractController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        ITipable tipable = other.gameObject.GetComponent<ITipable>();
+        ITipable[] tipable = other.gameObject.GetComponents<ITipable>();
         if(tipable != null)
-            tipable.OnEnter(player);
+        {
+            foreach (var t in tipable)
+            {
+                t.OnEnter(player);
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        ITipable tipable = other.gameObject.GetComponent<ITipable>();
+        ITipable[] tipable = other.gameObject.GetComponents<ITipable>();
         if(tipable != null)
-            tipable.OnExit(player);
+        {
+            foreach (var t in tipable)
+            {
+                t.OnExit(player);
+            }
+        }
     }
 }
 
