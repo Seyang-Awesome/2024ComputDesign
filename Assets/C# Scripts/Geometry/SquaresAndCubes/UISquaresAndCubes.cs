@@ -45,28 +45,28 @@ public class UISquaresAndCubes : Publisher
 
     private void OnClickLengthUpButton()
     {
-        currentLength = currentLength.Previous ?? lengthList.Last;
+        currentLength = currentLength.Next ?? lengthList.First;
         ShowLengthText();
         Publish();
     }
     
     private void OnClickLengthDownButton()
     {
-        currentLength = currentLength.Next ?? lengthList.First;
+        currentLength = currentLength.Previous ?? lengthList.Last;
         ShowLengthText();
         Publish();
     }
     
     private void OnClickDimensionUpButton()
     {
-        currentDimension = currentDimension.Previous ?? dimensionList.Last;
+        currentDimension = currentDimension.Next ?? dimensionList.First;
         ShowDimensionText();
         Publish();
     }
     
     private void OnClickDimensionDownButton()
     {
-        currentDimension = currentDimension.Next ?? dimensionList.First;
+        currentDimension = currentDimension.Previous ?? dimensionList.Last;
         ShowDimensionText();
         Publish();
     }

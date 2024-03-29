@@ -5,6 +5,7 @@ using UnityEngine;
 [Serializable]
 public class ApexDialogBoxGroup
 {
+    [Multiline(2)]
     public string content;
     public AudioClip clip;
 

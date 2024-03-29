@@ -12,6 +12,8 @@ public struct TipUIInfo
     public string title;
     [Multiline(3)]
     public string contain;
+
+    public ApexDialogBoxGroup group;
 }
 
 
@@ -37,9 +39,11 @@ public class TipUIManager : MonoSingleton<TipUIManager>
 
     private void Start()
     {
-        UpdateTip(0);
+        // UpdateTip(0);
         title.color = Color.white.GetTransparent();
         contain.color = Color.white.GetTransparent();
+        outLine.fillAmount = 0;
+        outLine.color = Color.white;
     }
 
     public void UpdateTip(int index)
@@ -48,6 +52,9 @@ public class TipUIManager : MonoSingleton<TipUIManager>
         outLine.color = Color.white;
         title.text = tipUIInfo[index].title;
         contain.text = tipUIInfo[index].contain;
+        
+        ApexDialogBoxPanel.Instance.PushDialogContent(tipUIInfo[index].group);
+        Debug.Log(666);
 
         DOTween.Sequence()
             .Append(outLine.DOFillAmount(1, changeDuration / 2).SetEase(Ease.OutQuad))

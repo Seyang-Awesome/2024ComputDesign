@@ -31,6 +31,11 @@ public class Cover : MonoSingleton<Cover>
         i.transform.localScale = new Vector3(10000, 10000);
         DontDestroyOnLoad(gameObject);
     }
+
+    public void SetBackgroundColor(Color color)
+    {
+        i.color = color;
+    }
     
     public void ChangeScene(string sceneName)
     {

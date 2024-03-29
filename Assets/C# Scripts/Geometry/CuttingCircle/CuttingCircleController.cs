@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 /// <summary>
@@ -9,17 +10,20 @@ public class CuttingCircleController : MonoBehaviour
 {
     [SerializeField] private CuttingCircleView view;
     [SerializeField] private CuttingCircleModel model;
+    [SerializeField] private ApexDialogBoxGroup group;
     private bool isPlayerEnter = false;
     private void Awake()
     {
         view.OnClickPanel += OnClickView;
         model.OnCurrentModelChanged += OnModelUpdate;
+        model.OnLastModelDequeue += OnLastModel;
     }
 
     private void OnDestroy()
     {
-        view.OnClickPanel += OnClickView;
-        model.OnCurrentModelChanged += OnModelUpdate;
+        view.OnClickPanel -= OnClickView;
+        model.OnCurrentModelChanged -= OnModelUpdate;
+        model.OnLastModelDequeue -= OnLastModel;
     }
 
     /// <summary>
@@ -30,15 +34,28 @@ public class CuttingCircleController : MonoBehaviour
         isPlayerEnter = true;
     }
 
-    public void OnClickView()
+    private void OnClickView()
     {
         if (!isPlayerEnter) return;
         model.MoveNext();
     }
 
-    public void OnModelUpdate(CuttingCircleData data)
+    private void OnModelUpdate(CuttingCircleData data)
     {
         view.OnModelUpdate(data);
+    }
+
+    private void OnLastModel()
+    {
+        DOTween.Sequence()
+            .AppendInterval(group.clip.length + 1)
+            .AppendCallback(() =>
+            {
+                Cover.Instance.SetBackgroundColor(Color.white);
+                Cover.Instance.ChangeScene("EndScene", group.clip.length + 1);
+            });
+        
+        ApexDialogBoxPanel.Instance.PushDialogContent(group);
     }
 }
 

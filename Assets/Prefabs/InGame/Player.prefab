@@ -136,6 +136,53 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &2262547322674637634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6895661838084459047}
+  - component: {fileID: 17013078110795248}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6895661838084459047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2262547322674637634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4031149463935662782}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &17013078110795248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2262547322674637634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a90efdf995b9df48a13766b7b0b6079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmContainer: {fileID: 11400000, guid: 6c4e444186d79ab4fa0a35f70325a137, type: 2}
+  soundEffectContainer: {fileID: 11400000, guid: 9975000f7035c0444a674fa41538195d,
+    type: 2}
 --- !u!1 &3926098583338260133
 GameObject:
   m_ObjectHideFlags: 0
@@ -5315,6 +5362,7 @@ Transform:
   - {fileID: 4031149463988865294}
   - {fileID: 4031149464433608424}
   - {fileID: 4031149464082421905}
+  - {fileID: 6895661838084459047}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5361,7 +5409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSpeed: 4
-  stepSeCheckInterval: 1.2
+  stepSeCheckInterval: 0.4
   rotationSpeed: 5
   moveSpeed: 5
   pitchRange: 80
@@ -5369,9 +5417,10 @@ MonoBehaviour:
   detectLength: 2.4
   audioRandomGroup:
     audioClips:
-    - {fileID: 8300000, guid: d136ae1a066de0e46ad0b3c732d17696, type: 3}
-    - {fileID: 8300000, guid: 0ec56607315c0ac4295e384afcbdc817, type: 3}
-    - {fileID: 8300000, guid: d328cc220eedf4a4b923a62791fda0ed, type: 3}
+    - {fileID: 8300000, guid: 173141fa5b85e7f4bb3a94841ab67880, type: 3}
+    - {fileID: 8300000, guid: 53a70339b6160294e80989cbfc629500, type: 3}
+    - {fileID: 8300000, guid: 2f0f20f932979a14ea1251c951d0b5d3, type: 3}
+    - {fileID: 8300000, guid: 79df4b3ed0a827c4c96ce048c25949ec, type: 3}
 --- !u!114 &4031149463935662778
 MonoBehaviour:
   m_ObjectHideFlags: 0

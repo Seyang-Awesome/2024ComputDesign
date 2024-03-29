@@ -10,6 +10,7 @@ public class CuttingCircleModel : SerializedMonoBehaviour
     [OdinSerialize] private Queue<CuttingCircleData> modelQueue = new();
     public CuttingCircleData CurrentModel { get; private set; }
     public event Action<CuttingCircleData> OnCurrentModelChanged;
+    public event Action OnLastModelDequeue;
     private void Start()
     {
         MoveNext();
@@ -20,6 +21,9 @@ public class CuttingCircleModel : SerializedMonoBehaviour
         if (modelQueue.Count == 0) return;
         CurrentModel = modelQueue.Dequeue();
         OnCurrentModelChanged?.Invoke(CurrentModel);
+        
+        if(modelQueue.Count == 0)
+            OnLastModelDequeue?.Invoke();
     }
 }
 
