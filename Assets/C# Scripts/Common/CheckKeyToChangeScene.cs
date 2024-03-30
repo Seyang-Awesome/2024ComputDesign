@@ -14,7 +14,6 @@ public class CheckKeyToChangeScene : MonoBehaviour, ITipable
 
     private void Update()
     {
-        Debug.Log(isCanChangeScene);
         if (isCanChangeScene && Input.GetKeyDown(keyCode))
         {
             onChangeScene?.Invoke();

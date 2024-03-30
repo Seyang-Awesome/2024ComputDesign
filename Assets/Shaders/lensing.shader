@@ -23,7 +23,7 @@ Shader "Unlit/lensing"
             #include "UnityCG.cginc"
 
             #define MAX_DIST 100.0
-            #define MAX_STEP 2000
+            #define MAX_STEP 1000
             #define MIN_DIST 0.001
             #define EFFECT_RADIAN  1
             #define PI 3.1415926

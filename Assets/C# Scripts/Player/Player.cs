@@ -5,5 +5,5 @@ using UnityEngine;
 
 public class Player : MonoSingleton<Player>
 {
-    
+    protected override bool IsDontDestroyOnLoad => false;
 }

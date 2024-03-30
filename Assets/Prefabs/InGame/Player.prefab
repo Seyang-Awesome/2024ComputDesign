@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -2.5}
-  m_SizeDelta: {x: 0, y: -5}
+  m_SizeDelta: {x: -100, y: -5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7682183795890326079
 CanvasRenderer:
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -10537,7 +10537,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -2.5}
-  m_SizeDelta: {x: 0, y: -5}
+  m_SizeDelta: {x: -100, y: -5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4954721402781219027
 CanvasRenderer:
@@ -10607,7 +10607,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -10675,7 +10675,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 180}
-  m_SizeDelta: {x: 1100, y: 60}
+  m_SizeDelta: {x: 1100, y: 130}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &9061535280643082639
 CanvasRenderer:
@@ -10806,7 +10806,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 60}
-  m_SizeDelta: {x: 1100, y: 60}
+  m_SizeDelta: {x: 1100, y: 130}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &8867295854937638272
 CanvasRenderer:
@@ -10897,7 +10897,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -2.5}
-  m_SizeDelta: {x: 0, y: -5}
+  m_SizeDelta: {x: -100, y: -5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6874221851731781864
 CanvasRenderer:
@@ -10967,7 +10967,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -11035,7 +11035,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 120}
-  m_SizeDelta: {x: 1100, y: 60}
+  m_SizeDelta: {x: 1100, y: 130}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &5200508766104020151
 CanvasRenderer:
@@ -11139,4 +11139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42957b03cca54e9aba62fba8f07c79ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groups: []
+  group:
+    content: 
+    clip: {fileID: 0}
+  delay: 0

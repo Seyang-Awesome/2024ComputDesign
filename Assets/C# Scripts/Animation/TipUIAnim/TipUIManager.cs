@@ -19,6 +19,8 @@ public struct TipUIInfo
 
 public class TipUIManager : MonoSingleton<TipUIManager>
 {
+    protected override bool IsDontDestroyOnLoad => false;
+
     [SerializeField]
     private TipUIInfo[] tipUIInfo;
 

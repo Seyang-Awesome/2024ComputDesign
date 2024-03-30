@@ -30175,7 +30175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   group:
-    content: "\u5DF2\u5BF9\u63A5\u5386\u53F2\u573A\u666F\uFF0C\u6B63\u5728\u8FD4\u56DE\u539F\u7A0B\u5F0F"
+    content: "\u5DF2\u5BF9\u63A5\u5386\u53F2\u573A\u666F\uFF0C\u6B63\u5728\u8FD4\u56DE\u539F\u7A0B\u5F0F..."
     clip: {fileID: 8300000, guid: fb3130d0401052145862c54c0438df9f, type: 3}
   delay: 0
 --- !u!114 &6795287658858993882

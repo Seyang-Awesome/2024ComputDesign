@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class FirstPersonController : MonoSingleton<FirstPersonController>
 {
+    protected override bool IsDontDestroyOnLoad => false;
+    
     [SerializeField] private float jumpSpeed = 10.0f; // 跳跃速度
     [SerializeField] private float stepSeCheckInterval = 0.5f;
     

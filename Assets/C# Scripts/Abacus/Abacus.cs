@@ -16,6 +16,9 @@ public class Abacus : Switch
     [SerializeField]
     private TextMeshProUGUI valueText;
 
+    [SerializeField] 
+    private ApexDialogBoxGroup group;
+
     public Action onFinishLevel;
     public Action onFinishGame;
 
@@ -59,6 +62,8 @@ public class Abacus : Switch
         DOTween.Sequence()
             .AppendInterval(3f)
             .OnComplete(SwitchOn);
+        
+        ApexDialogBoxPanel.Instance.PushDialogContent(group);
     }
    
 }

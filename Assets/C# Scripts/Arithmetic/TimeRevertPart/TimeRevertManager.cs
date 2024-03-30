@@ -7,6 +7,8 @@ using UnityEngine.Assertions.Must;
 
 public class TimeRevertManager : MonoSingleton<TimeRevertManager>
 {
+    protected override bool IsDontDestroyOnLoad => false;
+    
     public float decorationMinY;
     public float decorationMaxY;
     public bool isRevert = false;

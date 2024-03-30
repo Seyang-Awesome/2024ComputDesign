@@ -9,11 +9,23 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 756723a4663796d409f1c93a7095b588
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: 293790906fb8a8141a4542ca47d86e85
+    path: Assets/Scenes/Arithmatic.unity
+    guid: c94f1a8bfecf9ff45986acb2acce63fd
+  - enabled: 1
+    path: Assets/Scenes/Geometry.unity
+    guid: bf2840fab15680e479455640d6b218ca
+  - enabled: 1
+    path: Assets/Scenes/Ancient.unity
+    guid: c1e21d1d16ee6a842ade280da9b3ba13
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 9556df719024d4344a73be581c6d77d9
+  - enabled: 1
+    path: Assets/Scenes/EndDialog.unity
+    guid: 90ac225a0ee730442b8322489659eb39
+  - enabled: 1
+    path: Assets/Scenes/Preview/MainMenu.unity
+    guid: e17b053d6506c7b4ea67fb45afd321bd
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 403255ec3c7ad0e4d9cd8ca6cbec1c3e,
       type: 2}
