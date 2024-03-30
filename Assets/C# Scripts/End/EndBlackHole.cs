@@ -13,6 +13,9 @@ public class EndBlackHole : MonoBehaviour
         var s = transform.localScale.x;
         //transform.localScale = Vector3.zero;
 
+        var mat = GetComponent<Renderer>().material;
+        mat.SetFloat("_DistortionP", 10);
+        mat.SetFloat("_DiskRadian", 0);
         anim.onUpdateLastScene += () => OnShow(s);
         //OnShow(s);
     }
