@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0218efc50017eda4090d70d5896d233d, type: 3}
   m_Name: BgmContainer
   m_EditorClassIdentifier: 
-  bgms: []
+  bgms:
+  - {fileID: 8300000, guid: 6877ef0cf1e51aa42be7a2c2a83f367b, type: 3}

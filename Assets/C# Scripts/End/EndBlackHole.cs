@@ -7,39 +7,19 @@ public class EndBlackHole : MonoBehaviour
 {
     [SerializeField]
     private EndAnim anim;
+    [SerializeField]
+    private GameObject blackHole;
 
     private void Start()
     {
-        var s = transform.localScale.x;
-        //transform.localScale = Vector3.zero;
-
-        var mat = GetComponent<Renderer>().material;
-        mat.SetFloat("_DistortionP", 10);
-        mat.SetFloat("_DiskRadian", 0);
-        anim.onUpdateLastScene += () => OnShow(s);
+        blackHole.SetActive(false);
+        anim.onUpdateLastScene += () => blackHole.SetActive(true);
         //OnShow(s);
     }
 
-    private void OnShow(float s)
+    private void Update()
     {
-        //transform.localScale = Vector3.one * s;
-        var mat = GetComponent<Renderer>().material;
-        mat.SetFloat("_DistortionP", 10);
-        mat.SetFloat("_DiskRadian", 0);
-        DOTween.To
-            (
-            () => mat.GetFloat("_DistortionP"),
-            x => mat.SetFloat("_DistortionP", x),
-            2.5f,
-            2f
-            ).SetEase(Ease.OutBack);
-
-        DOTween.To
-            (
-            () => mat.GetFloat("_DiskRadian"),
-            x => mat.SetFloat("_DiskRadian", x),
-            0.25f,
-            2f
-            ).SetEase(Ease.OutBack);
+        blackHole.transform.Rotate(Vector3.up, Time.deltaTime * 10, Space.Self);
     }
+
 }

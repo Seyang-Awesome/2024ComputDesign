@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/EndDialog.unity
     guid: 90ac225a0ee730442b8322489659eb39
   - enabled: 1
-    path: Assets/Scenes/Preview/MainMenu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: e17b053d6506c7b4ea67fb45afd321bd
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 403255ec3c7ad0e4d9cd8ca6cbec1c3e,
