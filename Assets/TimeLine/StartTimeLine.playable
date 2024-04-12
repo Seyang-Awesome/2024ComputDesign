@@ -1607,6 +1607,7 @@ MonoBehaviour:
   - {fileID: -7160259095010360736}
   - {fileID: 3385087936301825940}
   - {fileID: -7884741685822088151}
+  - {fileID: 2144156096143512724}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -1986,6 +1987,29 @@ MonoBehaviour:
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: adcc9738cb7e596469d2d6b1ce0f72fa, type: 2}
+--- !u!114 &2144156096143512724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fc6f5187a81dc47999eefade6f0935, type: 3}
+  m_Name: Track Group
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips: []
+  m_Markers:
+    m_Objects: []
 --- !u!74 &2399097658012891187
 AnimationClip:
   m_ObjectHideFlags: 0

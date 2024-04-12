@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BgmContainer
   m_EditorClassIdentifier: 
   bgms:
-  - {fileID: 8300000, guid: 6877ef0cf1e51aa42be7a2c2a83f367b, type: 3}
+  - {fileID: 8300000, guid: 30d56001e88e84e47b2f2c21319ff79f, type: 3}

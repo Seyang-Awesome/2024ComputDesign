@@ -9,12 +9,12 @@ public class TestAncientDialogPanel : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
-            AncinetDialogPanel.Instance.Show(content);
+            AncientDialogPanel.Instance.Show(content);
         }
         
         if (Input.GetKeyDown(KeyCode.K))
         {
-            AncinetDialogPanel.Instance.Hide();
+            AncientDialogPanel.Instance.Hide();
         }
     }
 }
