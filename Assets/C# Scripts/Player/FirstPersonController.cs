@@ -37,8 +37,8 @@ public class FirstPersonController : MonoSingleton<FirstPersonController>
 
     void HandleMovement()
     {
-        float mouseX = Inputs.GetInstance().MouseX * rotationSpeed;
-        float mouseY = -Inputs.GetInstance().MouseY * rotationSpeed;
+        float mouseX = Inputs.GetInstance().MouseX * rotationSpeed * GlobalSettings.mouseSensitivity;
+        float mouseY = -Inputs.GetInstance().MouseY * rotationSpeed * GlobalSettings.mouseSensitivity;
 
         transform.Rotate(0.0f, mouseX, 0.0f);
 
