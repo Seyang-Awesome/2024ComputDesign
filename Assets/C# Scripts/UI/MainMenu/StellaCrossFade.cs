@@ -27,14 +27,8 @@ public class StellaCrossFade : MonoBehaviour
         lineSR.material.DOFade(0f, 0.1f);
         msRb.useGravity = false;
         moveStar.SetActive(false);
-
-        BGSR.gameObject.SetActive(true);
-        BGSR.material.DOFade(0.1f, 3f);
-        lineSR.gameObject.SetActive(true);
-        lineSR.material.DOFade(1f, 3f);
     }
 
-    /*
     // Update is called once per frame
     void Update()
     {
@@ -76,7 +70,7 @@ public class StellaCrossFade : MonoBehaviour
         moveStar.SetActive(true);
         //遍历飞行
         isStartFly = true;
-    }*/
+    }
     private void FlyAllStar(int index)
     {
         moveStar.transform.position = Vector3.MoveTowards(moveStar.transform.position, stars[index].transform.position, Time.fixedDeltaTime * 2);
