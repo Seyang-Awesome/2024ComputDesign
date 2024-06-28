@@ -19,7 +19,7 @@ public class AncientDialogInteracter : MonoBehaviour, ITipable
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && isCanOpen)
         {
             if (AncientDialogPanel.Instance.IsShowing)
             {
